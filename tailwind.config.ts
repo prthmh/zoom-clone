@@ -26,6 +26,9 @@ const config = {
         blue: {
           1: "#0E78F9",
         },
+        backgroundImage: {
+          hero: "url('/images/hero-background.png')",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 import MobileNav from "./MobileNav";
 
@@ -19,8 +20,14 @@ const NavBar = () => {
         </p>
       </Link>
 
-      <div className="flex-between gap-5 sm:hidden">
-        <MobileNav />
+      <div className="flex-between gap-5">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+
+        <div className="sm:hidden">
+          <MobileNav />
+        </div>
       </div>
     </nav>
   );
